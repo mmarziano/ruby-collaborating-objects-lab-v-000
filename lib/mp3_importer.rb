@@ -15,11 +15,6 @@ class MP3Importer
   end
   
   def import 
-    @files = Dir.entries(@path)
-    @files.delete_if {|file| file == "." || file == ".."}
-    @files.each do |file|
-      x = file[0]
-      Song.new(x)
-    end
+    @files.split(/\s*-\s*/)
   end 
 end 
