@@ -18,10 +18,8 @@ class MP3Importer
   end
   
   def import 
-
-    @files.each do |file|
-      w = file.split(/\s*-\s*/)[0]
-      Song.new(w)
+    self.files.each do |filename|
+      Song.new_by_filename(filename)
     end
   end 
 end 
