@@ -10,7 +10,6 @@ class Song
   end
   
   def self.new_by_filename(x)
-    x = MP3Importer.new
     Song.new(x)
   end
 end 
