@@ -20,6 +20,5 @@ class MP3Importer
       w = file.split(/\s*-\s*/)[0]
       Song.new(w)
     end
-
   end 
 end 
