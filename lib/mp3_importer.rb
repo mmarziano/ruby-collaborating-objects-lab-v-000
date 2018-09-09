@@ -16,6 +16,7 @@ class MP3Importer
   end
   
   def import 
-    @files.split(/\s*-\s*/)
+    @files.each do |file|
+      file.split(/\s*-\s*/)
   end 
 end 
