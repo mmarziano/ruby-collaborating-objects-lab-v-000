@@ -9,7 +9,7 @@ class Song
     
   end
   
-  def new_by_filename
+  def self.new_by_filename
     x = MP3Importer.new
     Song.new(x)
   end
