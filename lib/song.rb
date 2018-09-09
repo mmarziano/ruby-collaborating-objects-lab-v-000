@@ -18,7 +18,7 @@ class Song
     artist = Artist.find_or_create_by_name(parsed_file[1])
     song = Song.new(parsed_file[0])
     song.artist = artist
-    
+    artist.add_song(song)
     song
   end
 end 
