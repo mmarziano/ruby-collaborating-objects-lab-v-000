@@ -13,8 +13,7 @@ class Song
     
   end
   
-  def self.new_by_filename(x)
-
-    Song.new(y)
+  def self.new_by_filename(file)
+    parsed_file = file.split(" - ")
   end
 end 
