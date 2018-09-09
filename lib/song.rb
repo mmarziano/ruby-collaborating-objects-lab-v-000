@@ -13,11 +13,9 @@ class Song
   end 
 
   def self.new_by_filename(file)
-    parsed_file = file.split(" - ")
-    artist = Artist.find_or_create_by_name(parsed_file[1])
-    song = self.new(parsed_file[0])
-    song.artist = artist
-    artist.add_song(song)
+    song_info = file.chomp(".mp3").split(" - ")
+    song = Song.new(song_info[1])
+    song.artist_name = song_info[0]
     song
   end
 end 
