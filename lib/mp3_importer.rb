@@ -16,6 +16,7 @@ class MP3Importer
   end
   
   def import 
+    binding.pry
     @files.each do |file|
       w = file.split(/\s*-\s*/)[0]
       Song.new(w)
